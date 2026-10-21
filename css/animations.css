@@ -1,0 +1,127 @@
+/* ==========================================================================
+   DOPAMS — Animation Keyframes & Dynamic Micro-interactions
+   Telangana Police Narcotics Intelligence Portal
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Red Threat Beacon Sonar Radiance Waves
+   Concentric expanding sonar waves centered on the red intelligence node
+   -------------------------------------------------------------------------- */
+@keyframes beaconWave {
+  0% {
+    transform: scale(0.3);
+    opacity: 0.9;
+    border-width: 2px;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+    border-width: 0.8px;
+  }
+}
+
+.beacon-sonar.ring-1 {
+  animation: beaconWave 3.0s cubic-bezier(0.15, 0.5, 0.35, 1) infinite;
+}
+
+.beacon-sonar.ring-2 {
+  animation: beaconWave 3.0s cubic-bezier(0.15, 0.5, 0.35, 1) infinite 1.0s;
+}
+
+.beacon-sonar.ring-3 {
+  animation: beaconWave 3.0s cubic-bezier(0.15, 0.5, 0.35, 1) infinite 2.0s;
+}
+
+/* Red Threat Core Blinking Pulse */
+@keyframes beaconCoreBlink {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px #FF0000, 0 0 20px rgba(255, 43, 43, 0.9);
+  }
+  50% {
+    transform: scale(1.25);
+    box-shadow: 0 0 16px #FF2222, 0 0 30px rgba(255, 50, 50, 1);
+  }
+}
+
+.beacon-core {
+  animation: beaconCoreBlink 1.8s ease-in-out infinite;
+}
+
+/* --------------------------------------------------------------------------
+   Card Border Breathing Glow
+   Restrained, slow cyan glow modulation (6 seconds)
+   -------------------------------------------------------------------------- */
+@keyframes cardGlowBreath {
+  0%, 100% {
+    box-shadow: 
+      0 0 24px rgba(0, 213, 255, 0.22),
+      0 25px 60px rgba(0, 0, 0, 0.92),
+      inset 0 0 15px rgba(0, 213, 255, 0.05);
+    border-color: rgba(0, 213, 255, 0.45);
+  }
+  50% {
+    box-shadow: 
+      0 0 38px rgba(0, 213, 255, 0.38),
+      0 30px 70px rgba(0, 0, 0, 0.95),
+      inset 0 0 22px rgba(0, 213, 255, 0.10);
+    border-color: rgba(0, 240, 255, 0.65);
+  }
+}
+
+.login-card {
+  animation: cardEntrance 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards, cardGlowBreath 6s ease-in-out 0.7s infinite;
+}
+
+/* Card Entrance Arrival */
+@keyframes cardEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Eagle Force Watermark Radiance */
+@keyframes watermarkPulse {
+  0%, 100% {
+    opacity: 0.45;
+    transform: scale(1.0);
+  }
+  50% {
+    opacity: 0.54;
+    transform: scale(1.02);
+  }
+}
+
+.watermark-img {
+  animation: watermarkPulse 6s ease-in-out infinite;
+}
+
+/* --------------------------------------------------------------------------
+   Accessibility: Prefers-Reduced-Motion Support
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .beacon-sonar,
+  .beacon-core,
+  .login-card,
+  .watermark-img {
+    animation: none !important;
+  }
+
+  .login-card {
+    opacity: 1;
+    transform: none;
+    box-shadow: 0 0 28px rgba(0, 213, 255, 0.28), 0 25px 60px rgba(0, 0, 0, 0.92);
+  }
+
+  .authorize-btn:hover {
+    transform: none;
+  }
+}
