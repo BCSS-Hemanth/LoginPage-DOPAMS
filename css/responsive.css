@@ -8,17 +8,17 @@
    -------------------------------------------------------------------------- */
 @media (min-width: 1600px) {
   .login-card {
-    width: 440px;
-    padding: 42px 36px 38px 36px;
+    width: 460px;
+    padding: 38px 36px 32px 36px;
   }
 
   .card-title {
-    font-size: 38px;
-    letter-spacing: 0.25em;
+    font-size: 34px;
+    letter-spacing: 0.20em;
   }
 
   .input-control {
-    height: 52px;
+    height: 50px;
   }
 
   .text-input {
@@ -26,7 +26,7 @@
   }
 
   .authorize-btn {
-    height: 54px;
+    height: 52px;
     font-size: 16.5px;
   }
 }
@@ -40,8 +40,8 @@
   }
 
   .login-card {
-    width: 390px;
-    padding: 34px 28px 30px 28px;
+    width: 440px;
+    padding: 32px 32px 28px 32px;
   }
 
   .card-title {
@@ -73,14 +73,15 @@
   }
 
   .login-card {
-    width: 410px;
+    width: 420px;
     max-width: 90vw;
+    padding: 30px 28px 26px 28px;
   }
 
   .vignette-overlay {
     background: 
-      radial-gradient(circle at center, rgba(3, 12, 23, 0.45) 0%, rgba(2, 8, 16, 0.85) 100%),
-      linear-gradient(180deg, rgba(2, 8, 16, 0.75) 0%, transparent 20%, transparent 80%, rgba(2, 8, 16, 0.9) 100%);
+      radial-gradient(circle at center, rgba(3, 12, 23, 0.35) 0%, rgba(2, 8, 16, 0.8) 100%),
+      linear-gradient(180deg, rgba(2, 8, 16, 0.7) 0%, transparent 20%, transparent 80%, rgba(2, 8, 16, 0.88) 100%);
   }
 }
 
@@ -115,11 +116,11 @@
 
   .vignette-overlay {
     background: 
-      linear-gradient(180deg, rgba(3, 10, 20, 0.82) 0%, rgba(3, 10, 20, 0.6) 25%, rgba(2, 8, 15, 0.88) 75%, rgba(1, 6, 14, 0.98) 100%);
+      linear-gradient(180deg, rgba(3, 10, 20, 0.75) 0%, rgba(3, 10, 20, 0.45) 25%, rgba(2, 8, 15, 0.82) 75%, rgba(1, 6, 14, 0.96) 100%);
   }
 
-  .intel-target-beacon {
-    display: none !important;
+  .ambient-particle-canvas {
+    opacity: 0.75;
   }
 
   .main-layout {
@@ -138,20 +139,22 @@
   .login-card {
     width: 100%;
     max-width: 380px;
-    padding: 32px 20px 28px 20px;
-    border-radius: 14px;
-    box-shadow: 0 0 20px rgba(0, 213, 255, 0.2), 0 15px 40px rgba(0, 0, 0, 0.9);
+    padding: 26px 20px 24px 20px;
+    border-radius: 16px;
+    box-shadow: 0 -5px 16px rgba(255, 255, 255, 0.40), 0 15px 40px rgba(0, 0, 0, 0.85);
   }
 
   .card-title {
-    font-size: 28px;
-    letter-spacing: 0.2em;
+    font-size: 26px;
+    letter-spacing: 0.16em;
+    text-indent: 0.16em;
+    margin-bottom: 10px;
   }
 
-  .card-watermark {
-    width: 85%;
-    height: 85%;
-    opacity: 0.42;
+  .card-bg-emblem {
+    top: 62px;
+    width: 275px;
+    height: 275px;
   }
 
   .input-control {
@@ -168,20 +171,24 @@
   }
 
   .form-options-row {
-    margin-top: -4px;
+    margin-top: 6px;
+  }
+
+  .form-action-group {
+    margin-top: 36px;
   }
 
   .checkbox-text {
-    font-size: 12.5px;
+    font-size: 13px;
   }
 
   .forgot-link {
-    font-size: 12px;
+    font-size: 12.5px;
   }
 
   .authorize-btn {
     height: 48px;
-    font-size: 14px;
+    font-size: 14.5px;
     letter-spacing: 0.12em;
   }
 }
@@ -191,15 +198,23 @@
    -------------------------------------------------------------------------- */
 @media (max-width: 359px) {
   .login-card {
-    padding: 24px 16px 20px 16px;
+    padding: 22px 14px 20px 14px;
   }
 
   .card-title {
-    font-size: 24px;
+    font-size: 22px;
+    letter-spacing: 0.14em;
+    text-indent: 0.14em;
+  }
+
+  .card-bg-emblem {
+    top: 54px;
+    width: 230px;
+    height: 230px;
   }
 
   .authorize-btn {
-    font-size: 12.5px;
+    font-size: 13px;
     letter-spacing: 0.08em;
   }
 }
